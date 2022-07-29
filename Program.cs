@@ -15,5 +15,19 @@ string[] ControlTask(string[] firstArray)
         return result;
 
     }
-
+string[] resultArray = new string[CountElements(firstArray)];
+    int count = firstArray.Length;
+    int i = 0;
+    int k = 0;
+    while (i < count)
+    {
+        if (firstArray[i].Length <= 3)
+        {
+            resultArray[k] = firstArray[i];
+            k = k + 1;
+        }
+        i = i + 1;
+    }
+    return resultArray;
+}
     
