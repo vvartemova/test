@@ -30,4 +30,17 @@ string[] resultArray = new string[CountElements(firstArray)];
     }
     return resultArray;
 }
-    
+string PrintArray(string[] array)
+{
+    int length = array.Length;
+    string result = String.Empty;
+    for (int i = 0; i < length; i++)
+    {
+        result = result + ($"array[{i + 1}]: {array[i]} \n");
+    }
+    return result;
+}
+
+string[] firstArray = { "один", "два", "три", "четыре", "пять" };
+string[] resultArray = ControlTask(firstArray);
+Console.WriteLine(PrintArray(resultArray)); 
